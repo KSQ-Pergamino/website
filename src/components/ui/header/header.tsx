@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { DesktopHeader, MobileHeader } from './components';
+import { NavigationLink } from '@/interfaces';
 
 
-const navigationLinks = [
+const navigationLinks: NavigationLink[] = [
   {
     title: 'Inicio',
     href: '#'

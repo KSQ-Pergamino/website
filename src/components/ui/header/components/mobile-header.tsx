@@ -1,7 +1,7 @@
 'use client';
 
 interface MobileHeaderProps {
-    navigationLinks: any[];
+    navigationLinks: NavigationLink[];
 }
 
 import headerLogo from '@/assets/header-logo.svg';
@@ -10,8 +10,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { CopyrightText } from '../../common';
+import { NavigationLink } from '@/interfaces';
 
-const renderMobileLinks = (navigationLinks: any[]) => {
+const renderMobileLinks = (navigationLinks: NavigationLink[]) => {
     return navigationLinks.map(item => {
         return (<li className='text-xl font-medium' key={item.title}><Link href={item.href}>{item.title}</Link></li>)
     })
@@ -33,7 +34,7 @@ export const MobileHeader = ({ navigationLinks }: MobileHeaderProps) => {
                     />
                 </button>
             </div>
-            <nav className={clsx('bg-primary/80 p-4 text-background absolute top-20 left-0 right-0 h-max transition-all duration-300', isOpen ? 'translate-x-0 backdrop-blur-xs' : '-translate-x-full')}>
+            <nav className={clsx('bg-primary/80 p-4 text-background absolute top-20 left-0 right-0 transition-all duration-300 h-[calc(100vh_-_128px)]', isOpen ? 'translate-x-0 backdrop-blur-xs' : '-translate-x-full')}>
                 <div className='border-b border-background/50 mb-4'>
                     <span>Menu Principal</span>
                 </div>
@@ -42,7 +43,7 @@ export const MobileHeader = ({ navigationLinks }: MobileHeaderProps) => {
                         renderMobileLinks(navigationLinks)
                     }
                 </ul>
-                <CopyrightText className='text-xs mt-4 text-center text-background/80'/>
+                <CopyrightText className='text-xs text-center text-background/80 mt-4'/>
             </nav>
         </div>
     )

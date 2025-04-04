@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from '@/components/ui';
+import Link from 'next/link';
+
+import whatsAppIcon from '@/assets/icons/WhatsApp.png'
+import Image from 'next/image';
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -20,11 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className='relative'>
       <body
-        className={`${montserrat.className} antialiased`}
+        className={`${montserrat.className} antialiased relative`}
       >
         <Header />
+        <Link href={'#'} className='fixed bottom-4 right-4 z-50'><Image alt='Icono de WhatsApp' src={whatsAppIcon} height={56} width={56} /></Link>
         {children}
         <Footer />
       </body>

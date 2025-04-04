@@ -2,15 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import headerLogo from '@/assets/header-logo.svg';
+import { NavigationLink } from '@/interfaces';
 
-const renderDesktopLinks = (navigationLinks: any[]) => {
+const renderDesktopLinks = (navigationLinks: NavigationLink[]) => {
     return navigationLinks.map(item => {
       return (<li key={item.title} className='transition-all duration-300 hover:font-bold'><Link href={item.href}>{item.title}</Link></li>)
     })
   }
 
 interface DesktopHeaderProps {
-    navigationLinks: any[]
+    navigationLinks: NavigationLink[]
 }
 
 export const DesktopHeader = ({navigationLinks}: DesktopHeaderProps) => {
