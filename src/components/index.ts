@@ -2,3 +2,8 @@ export * from './hero';
 export * from './ui';
 export * from './benefits';
 export * from './banner';
+export * from './protocols';
+export * from './news';
+export * from './studies';
+export * from './contact';
+export * from './form';
