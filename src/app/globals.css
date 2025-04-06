@@ -5,6 +5,8 @@
   --foreground: #171717;
   --primary: #005D28;
   --primary-light: #007834;
+  --secondary: #890A25;
+  --secondary-light: #A50E3A;
 }
 
 @theme inline {
@@ -12,6 +14,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
 }
 
 body {
