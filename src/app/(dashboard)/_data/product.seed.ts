@@ -1,0 +1,78 @@
+import { Product } from '@/app/models';
+
+const createSlug = (text: string) => {
+    return text.replaceAll(" ","-").replaceAll("'","");
+}
+
+export const ProductSeed: Product[] = [
+    {
+        name: "Wireless Headphones",
+        shortDescription: "Bluetooth over-ear headphones",
+        description: "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
+        category: "electronics",
+        subCategory: "audio",
+        images: [],
+        isActive: true,
+        isAvailable: true,
+        slug: createSlug("Wireless Headphones"),
+        tags: ["audio", "wireless", "music"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+    },
+    {
+        name: "Eco-Friendly Water Bottle",
+        shortDescription: "Reusable stainless steel bottle",
+        description: "Keeps drinks cold for 24 hours and hot for 12 hours. BPA-free and eco-friendly.",
+        category: "home",
+        subCategory: "kitchen",
+        images: [],
+        isActive: true,
+        isAvailable: false,
+        slug: createSlug("Eco-Friendly Water Bottle"),
+        tags: ["eco", "bottle", "kitchen"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+    },
+    {
+        name: "Yoga Mat Pro",
+        shortDescription: "Non-slip yoga mat",
+        description: "Durable, extra-thick yoga mat for all types of exercise and stretching.",
+        category: "sports",
+        subCategory: "fitness",
+        images: [],
+        isActive: true,
+        isAvailable: true,
+        slug: createSlug("Yoga Mat Pro"),
+        tags: ["fitness", "yoga", "mat"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+    },
+    {
+        name: "Smart LED Bulb",
+        shortDescription: "Color-changing smart bulb",
+        description: "Control your lighting with your phone or voice assistant. 16 million colors.",
+        category: "electronics",
+        subCategory: "lighting",
+        images: [],
+        isActive: false,
+        isAvailable: true,
+        slug: createSlug("Smart LED Bulb"),
+        tags: ["smart", "lighting", "home"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+    },
+    {
+        name: "Classic Notebook",
+        shortDescription: "Hardcover ruled notebook",
+        description: "192 pages, acid-free paper, perfect for notes and journaling.",
+        category: "office",
+        subCategory: "stationery",
+        images: [],
+        isActive: true,
+        isAvailable: true,
+        slug: createSlug("Classic Notebook"),
+        tags: ["notebook", "stationery", "office"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+    }
+] 
