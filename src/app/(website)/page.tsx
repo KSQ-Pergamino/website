@@ -14,13 +14,13 @@ const Contact = () => {
             <article>
                 <h2 className='mb-4 text-3xl uppercase font-bold text-primary'>Contacto</h2>
                 <p className='text-xl'><span className='font-bold'>¿Listo para potenciar tus cultivos?</span>  Habla directamente con nuestros expertos.</p>
-                <div className='flex mt-12 gap-12'>
-                    <div className='flex-1'>
+                <div className='mt-12 gap-12'>
+                    <div className='flex-1 hidden md:block'>
                         <h3 className='font-bold text-primary text-xl mb-4'>Información de contacto</h3>
                         <p><span className='font-bold'>Email:</span> contacto@ksqpergamino.com.ar</p>
                         <p><span className='font-bold'>Oficinas comerciales:</span> Ruta 8 Km. 123 - Pergamino, Buenos Aires</p>
                         <p><span className='font-bold'>Teléfonos:</span> +5492477112233 / +5492477445566</p>
-                        <div className='flex justify-center mt-12'>
+                        <div className='justify-center mt-12 hidden md:flex'>
                             <Image alt='Bandera Kioshi Stone' src={kioshiFlag}/>
                         </div>
                     </div>

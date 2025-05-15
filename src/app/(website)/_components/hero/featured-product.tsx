@@ -8,28 +8,25 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
-import placeholderImage from '@/assets/images/girasol-1.jpg'
+import placeholderImage from '@/assets/products/TPS-8.png'
+import placeholderImage2 from '@/assets/products/TPS-Cu-8.png'
+import placeholderImage3 from '@/assets/products/TPS-78-8.png'
+import placeholderImage4 from '@/assets/products/S+-8.png'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { ProductCard } from '../products'
 
 export const FeaturedProduct = () => {
     return (
         <section className="flex flex-col">
             <h2 className="text-3xl font-semibold mb-6">Productos destacado</h2>
-            <Card className="flex flex-col items-center md:flex-row ">
-                <Image alt="Producto #1" src={placeholderImage} className="w-40 h-40 object-center rounded-sm ml-6" />
-                <div className="">
-                    <CardHeader>
-                        <CardTitle>Mist TP320</CardTitle>
-                        <CardDescription>Corrector de suelo</CardDescription>
-                    </CardHeader>
-                    <CardContent className="mb-6">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laborum ad, voluptas ut nesciunt quia nam magnam! Vitae magni qui, ab velit aperiam, dolorem quaerat magnam, unde cupiditate quae delectus laborum tenetur consectetur in blanditiis recusandae ea id obcaecati quos eveniet. Fugit autem culpa provident magnam pariatur corrupti aut quia!</p>
-                    </CardContent>
-                    <CardFooter className="w-full flex justify-end">
-                        <Button>Ver más</Button>
-                    </CardFooter>
-                </div>
-            </Card>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                <ProductCard category='Correción de suelo' image={placeholderImage} title='TPS' />
+                <ProductCard category='Correción de suelo' image={placeholderImage2} title='CU'  subCategory='Microelementos'/>
+                <ProductCard category='Correción de suelo' image={placeholderImage3} title='TPS 78' />
+                <ProductCard category='Correción de suelo' image={placeholderImage4} title='S+' />
+            </div>
         </section>
     )
 }
